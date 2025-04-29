@@ -1,0 +1,135 @@
+   * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.status {
+    padding: 40px 300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid black;
+    gap: 24px;
+    background-image: url('/image/background-stats.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.status div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.07); 
+}
+
+.status p {
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.status span {
+    color: #00B207;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    line-height: 120%;
+}
+
+.leaf {
+    position: absolute;
+    width: 232px;
+    height: 131px;
+    top: 10px;
+    left: -50px;
+}
+
+.pear {
+    position: absolute;
+    width: 75px;
+    height: 100px;
+    top: 15px;
+    right: 0;
+}
+
+.mushroom {
+    position: absolute;
+    width: 82px;
+    height: 60px;
+    bottom: -15px;
+    right: 100px;
+}
+
+@media (max-width: 768px) {
+    .status {
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .leaf, .pear, .mushroom {
+        display: none;
+    }
+}
+
+.shop-now{
+    padding: 40px 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.shop-now div{
+    border-radius: 10px;
+    padding: 40px 30px;
+}
+
+.organic{
+    background-image: url('/image/organic.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.timer{
+    background-image: url('/image/timer.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+
+.btn-green {
+    margin-top: 20px;
+    border-radius: 43px;
+    padding: 4px 4px;
+    background-color: #00B207;
+    color: white;
+}
+
+.price{
+background-color: #FF8A00;
+border-radius: 5px;
+padding: 2px;
+color: white;
+font-family: 'Poppins', sans-serif;
+}
+
+.organic h2, 
+.organic p{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.speciaal {
+    font-size: 14px;
+    margin-top: 20px;
+}
