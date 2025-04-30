@@ -62,7 +62,7 @@ header{
    
 }
 
-.main-nav ul li a {
+/* .main-nav ul li a {
     text-decoration: none;
     color: #333;
     font-size: 16px;
@@ -70,7 +70,7 @@ header{
     gap: 4px;
     font-family: 'Poppins', sans-serif;
     
-}
+} */
 
 .main-nav ul li a:hover {
     color: #28a745;
