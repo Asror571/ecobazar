@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 .first-part {
-    margin-right: 30rem;
+    
+}
+header{
+    border: 1px solid red;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.nav{
+    border: 1px solid black;
+    width: 100%;
+    max-width: 80%;
 }
 .top-bar {
     display: flex;
@@ -13,6 +25,7 @@
     gap: 70rem;
 }
 
+
 .top-bar span img {
     vertical-align: middle;
     margin-right: 5px;
@@ -23,10 +36,12 @@
     display: flex;
     gap: 10px;
     width: 100%;
+   
 }
 
 .language-currency select {
     cursor: pointer;
+    border: none;
 
 }
 
@@ -35,11 +50,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
     background-color: #fff;
-    width: 95%;
-    height: 78px;
-    top: 42px;
 }
 
 .main-nav ul {
@@ -65,6 +76,7 @@
     color: #28a745;
 }
 
+
 .logo {
     flex-grow: 1;
     text-align: center;
@@ -85,10 +97,6 @@
 
 
 .contact-icons {
-    width: 375px;
-    height: 34px;
-    top: 22px;
-    left: 1245px;
     display: flex;
     align-items: center;
     gap: 1.2rem;
@@ -117,6 +125,7 @@
 }
 .call a {
     gap: 1rem;
+
 
 }
 .contact-icons a img {
