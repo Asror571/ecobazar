@@ -124,6 +124,7 @@
     background-color: #00B207;
     color: white;
     cursor: pointer;
+    border: none;
 }
 
 .price{
@@ -297,6 +298,7 @@ font-family: 'Poppins', sans-serif;
 .product-image img {
     width: 100%;
     height: auto;
+  
 }
 
 
@@ -324,9 +326,7 @@ font-family: 'Poppins', sans-serif;
     width: 40px;
     cursor: pointer;
 }
-.product-actions img:hover {
-    color: #00B207;
-}
+
 
 
 
@@ -355,7 +355,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .icon {
-    width: 10px; 
+    width: 24px; 
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -364,3 +364,172 @@ font-family: 'Poppins', sans-serif;
     transform: scale(1.2); 
 }
 
+
+
+
+
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 135px;
+}
+
+.section-title h2 {
+    color: #333;
+    font-size: 17px;
+}
+
+.product-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card-2 {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+.product-grid-23 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card-23 {
+    display: flex;
+    align-items: center;
+    border: 1px solid #2C742F;
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px 0px #20B52652;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.product-card-2:hover {
+    transform: translateY(-10px);
+}
+.product-card-23:hover {
+    transform: translateY(-10px);
+}
+
+.product-image-2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image-2 img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eee;
+}
+
+.product-icons-2 {
+    position: absolute;
+    top: 10px; 
+    right: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card-2:hover .product-icons {
+    display: flex;
+    opacity: 1;
+}
+
+.icon-2 {
+    width: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icon-2:hover {
+    transform: scale(1.2);
+}
+
+.product-info-2 {
+    padding: 10px;
+}
+
+.product-info-2 p {
+    font-size: 10px;
+    margin: 10px 0;
+    color: #4D4D4D;
+}
+
+.product-info-2 h4{
+    font-size: 10px;
+    margin: 10px 0;
+    color: #2C742F;
+}
+
+.product-price-2 {
+    font-size: 1em;
+    color: #e47911;
+    margin-bottom: 10px;
+}
+
+.product-rating-2 img {
+    width: 70px;
+}
+
+
+.bag1{
+        width: 18px;
+        cursor: pointer; 
+}
+
+
+.bag1:hover {
+    transform: scale(1.2);
+}
+
+
+.mini-container{
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.hot-salee{
+    width: 225px;
+    border-radius: 10px;
+    background-image: url('/zarnigor/image/hot-sale-bc.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.hot-salee p{
+    margin-top: 34px;
+    margin-bottom: 12px;
+}
+
+
+.btn-white{
+    margin-top: 15px;
+    border-radius: 43px;
+    padding: 4px 4px;
+    background-color: white;
+    color: #00B207;
+    cursor: pointer;
+    border: none;
+}
