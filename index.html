@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecobazar</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/style.css">
-    
-</head>
-<body>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (for heart/cart/eye icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
+
+</head>
+
+<body>
+    <!-- zaarnigor -->
     <section class="second-part">
-        <div class="status"> 
+        <div class="status">
             <img src="./zarnigor/svg/leaf.svg" class="leaf" alt="leaf">
             <img src="./zarnigor/image/pear.png" class="pear" alt="Pear">
             <img src="./zarnigor/image/mushroom.png" class="mushroom" alt="Mushroom">
@@ -37,32 +44,210 @@
             </div>
         </div>
 
-        <div class="shop-now">
-            <div class="organic">
-                <p>100% ORGANIC</p>
-                <h2>Fruit & Vegetable</h2>
-                <p class="speciaal">Starting at: <span class="price">$11.99</span></p>
-                <button class="btn-green">Shop Now →</button>         
+        <div class="containnner">
+            <div class="shop-now">
+                <div class="organic">
+                    <p class="special1">100% ORGANIC</p>
+                    <h2>Fruit & Vegetable</h2>
+                    <p class="speciaal">Starting at: <span class="price">$11.99</span></p>
+                    <button class="btn-green">Shop Now →</button>
+
+                </div>
+
+                <section class="banner">
+                    <div class="info">
+                        <p class="subtitle">SALE OFF THE WEEK</p>
+                        <h2>Sales of the Year</h2>
+                        <div class="timer">
+                            <div><span id="days">00 </span>
+                                <p>DAYS</p>
+                            </div>
+                            <div><span id="dot"> : </span>
+                                <p></p>
+                            </div>
+                            <div><span id="hours">00</span>
+                                <p>HOURS</p>
+                            </div>
+                            <div><span id="dot">:</span>
+                                <p></p>
+                            </div>
+                            <div><span id="minutes">00</span>
+                                <p>MINS</p>
+                            </div>
+                            <div><span id="minutes">:</span>
+                                <p></p>
+                            </div>
+                            <div><span id="seconds">00</span>
+                                <p>SECS</p>
+                            </div>
+                        </div>
+                        <button class="btn-green">Shop Now →</button>
+                    </div>
+                    <div class="image"></div>
+                </section>
+                <script src="script.js"></script>
+
+                <img src="./zarnigor/image/leaf2.png" class="leaf2" alt="leaf2">
             </div>
 
-            <section class="banner">
-                <div class="info">
-                  <p class="subtitle">SALE OFF THE WEEK</p>
-                  <h2>Sales of the Year</h2>
-                  <div class="timer">
-                    <div><span id="days">00</span><p>DAYS</p></div>
-                    <div><span id="hours">00</span><p>HOURS</p></div>
-                    <div><span id="minutes">00</span><p>MINS</p></div>
-                    <div><span id="seconds">00</span><p>SECS</p></div>
-                  </div>
-                  <button class="btn-green">Shop Now →</button>
+            <div class="best-products">
+                <div class="beginning">
+                    <h2>Best Seller Products</h2>
+
+                    <div class="view-all">
+                        <a href="">View All</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-4.147-4.146a.5.5 0 0 1 .708-.708l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                        </svg>
+                    </div>
+
                 </div>
-                <div class="image"></div>
-              </section>
-            
-              <script src="script.js"></script>
+
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card1">
+                        <div class="product-image">
+                            <img src="./zarnigor/image/applee.png" alt="Green Apple">
+                            <div class="product-icons">
+                                <img src="./zarnigor/svg/Add-To-wishlist.svg" alt="Wishlist" class="icon">
+                                <img src="./zarnigor/svg/view.svg" alt="View" class="icon">
+                            </div>
+                        </div>
+                            <div class="product-info">
+                                <h2>Green Apple</h2>
+                                <div class="product-price">$14.99</div>
+                                <div class="product-rating">
+                                    <img src="./zarnigor/image/Rating.png" alt="Rating">
+                                </div>
+                            
+                            <div class="product-actions">
+                                <img src="./zarnigor/svg/green-bag.svg" alt="Add to Cart">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="./zarnigor/image/cabbage-chinese.png" alt="Chinese Cabbage">
+                            <div class="product-icons">
+                                <img src="./zarnigor/svg/Add-To-wishlist.svg" alt="Wishlist" class="icon">
+                                <img src="./zarnigor/svg/view.svg" alt="View" class="icon">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h2>Chinese Cabbage</h2>
+                            <div class="product-price">$14.99</div>
+                            <div class="product-rating">
+                                <img src="./zarnigor/image/Rating.png" alt="Rating">
+                            </div>
+                            <div class="product-actions">
+                                <img src="./zarnigor/svg/bag.svg" alt="Add to Cart">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="./zarnigor/image/lettucee.png" alt="Green Lettuce">
+                            <div class="product-icons">
+                                <img src="./zarnigor/svg/Add-To-wishlist.svg" alt="Wishlist" class="icon">
+                                <img src="./zarnigor/svg/view.svg" alt="View" class="icon">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h2>Green Lettuce</h2>
+                            <div class="product-price">$14.99</div>
+                            <div class="product-rating">
+                                <img src="./zarnigor/image/Rating.png" alt="Rating">
+                            </div>
+                            <div class="product-actions">
+                                <img src="./zarnigor/svg/bag.svg" alt="Add to Cart">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card1">
+                        <div class="product-image">
+                            <img src="./zarnigor/image/green-chili.png" alt="Green Chili">
+                            <div class="product-icons">
+                                <img src="./zarnigor/svg/Add-To-wishlist.svg" alt="Wishlist" class="icon">
+                                <img src="./zarnigor/svg/view.svg" alt="View" class="icon">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h2>Green Chili</h2>
+                            <div class="product-price">$14.99</div>
+                            <div class="product-rating">
+                                <img src="./zarnigor/image/Rating.png" alt="Rating">
+                            </div>
+                            <div class="product-actions">
+                                <img src="./zarnigor/svg/green-bag.svg" alt="Add to Cart">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="./zarnigor/image/cornn.png" alt="Corn">
+                            <div class="product-icons">
+                                <img src="./zarnigor/svg/Add-To-wishlist.svg" alt="Wishlist" class="icon">
+                                <img src="./zarnigor/svg/view.svg" alt="View" class="icon">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h2>Corn</h2>
+                            <div class="product-price">$14.99</div>
+                            <div class="product-rating">
+                                <img src="./zarnigor/image/Rating.png" alt="Rating">
+                            </div>
+                            <div class="product-actions">
+                                <img src="./zarnigor/svg/bag.svg" alt="Add to Cart">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
     </section>
+
+
+
+
+    <script>
+        const countdownDate = new Date("May 20, 2025 00:00:00").getTime();
+
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = String(days).padStart(2, "0");
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, "0");
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, "0");
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, "0");
+        }, 1000);
+    </script>
 </body>
+
 </html>

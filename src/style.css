@@ -75,12 +75,20 @@
     }
 }
 
-.shop-now{
+.containnner {
     padding: 40px 300px;
+    background-image: url('/zarnigor/image/shop-now.bckground.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.shop-now{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-
+   
 }
 
 .shop-now div{
@@ -107,12 +115,15 @@
 
 
 
+
+
 .btn-green {
-    margin-top: 20px;
+    margin-top: 15px;
     border-radius: 43px;
     padding: 4px 4px;
     background-color: #00B207;
     color: white;
+    cursor: pointer;
 }
 
 .price{
@@ -129,22 +140,25 @@ font-family: 'Poppins', sans-serif;
     font-family: 'Poppins', sans-serif;
 }
 
+.special1{
+    margin-top: 20px;
+}
+
 .speciaal {
     font-size: 14px;
-    margin-top: 20px;
+    margin-top: 15px;
+
 }
 
 
 .banner .info {
     color: white;
     font-family: 'Poppins', sans-serif;
-    /* max-width: 50%; */
 }
 
 .banner .info .subtitle {
     font-size: 14px;
-    opacity: 0.9;
-    /* margin-bottom: 10px; */
+    margin-top: 20px;
 }
 
 .banner .info h2 {
@@ -153,34 +167,33 @@ font-family: 'Poppins', sans-serif;
 
 .banner .timer {
     display: flex;
-    gap: 20px;
-    /* font-size: 18px; */
-    /* margin-bottom: 10px; */
+    gap: 5px;
+    margin: 0;
+    padding: 0;
 }
 
 .banner .timer div {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.1);
     padding: 1px;
     border-radius: 8px;
-    /* min-width: 60px; */
 }
 
 .banner .timer span {
     font-size: 14px;
-    font-weight: bold;
-    display: block;
     color: #FFFFFF;
 }
 
 .banner .timer p {
-    font-size: 12px;
+    font-size: 7px;
     color: #FFFFFF;
-    /* margin-top: 4px; */
+}
+
+.shop-now h2{
+    font-size: 23px;
+    font-style: bold;
 }
 
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .shop-now {
         padding: 20px;
         grid-template-columns: 1fr;
@@ -194,4 +207,160 @@ font-family: 'Poppins', sans-serif;
     .banner .timer {
         justify-content: center;
     }
-} */
+}
+
+.leaf2{
+        width: 50px;
+        height: 60px;
+        position: absolute;
+        top: 300px;
+        left: 1320.9px;
+}
+
+
+.card:hover .bi-heart-fill,
+.card:hover .bi-eye-fill {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+
+
+
+.best-products{
+    padding: 40px 0;
+}
+
+.best-products h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.beginning{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.view-all a{
+    text-decoration: none;
+    color: #00B207;
+}
+
+.view-all svg{
+    color: #00B207;
+}
+
+
+
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+.product-card1 {
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s;
+    border: 1px solid #2C742F;
+    box-shadow: 0px 0px 12px 0px #20B52652;
+
+    
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid #2C742F;
+    box-shadow: 0px 0px 12px 0px #20B52652;
+
+
+}
+.product-card1:hover {
+    transform: translateY(-5px);
+}
+
+
+
+.product-image img {
+    width: 100%;
+    height: auto;
+}
+
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h2 {
+    font-size: 10px;
+    margin: 10px 0;
+    color: #4D4D4D;
+}
+
+.product-price {
+    font-size: 1em;
+    color: #e47911;
+    margin-bottom: 5px;
+}
+
+.product-rating img {
+    width: 70px;
+}
+
+.product-actions img {
+    width: 40px;
+    cursor: pointer;
+}
+.product-actions img:hover {
+    color: #00B207;
+}
+
+
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-icons {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    display: none; 
+    flex-direction: column; 
+    gap: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-icons {
+    display: flex; 
+    opacity: 1;
+}
+.product-card1:hover .product-icons {
+    display: flex; 
+    opacity: 1;
+}
+
+.icon {
+    width: 10px; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2); 
+}
+
