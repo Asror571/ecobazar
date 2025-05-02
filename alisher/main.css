@@ -134,33 +134,23 @@ main .first {
   margin-bottom: 30px;
 }
 
-main .first_div {
-  padding-left: 19rem;
-}
-
 main .first_div h5 {
-  
   font-size: 18px;
   color: #00B207;
-  
 }
 
 main .first_div h1 {
   font-size: 36px;
   color: #333;
-  justify-content: center;
-  text-align: center;
 }
 
 .first_div h5, .first_div h1 {
   transform: none;
-  
 }
 
 main .second {
   display: flex;
   gap: 10px;
-  padding-right: 17rem;
 }
 
 main .second img {
@@ -336,6 +326,10 @@ main .card-body p {
   background-color: #009a06;
 }
 
+
+.foooter_conten{
+  border: 1px solid rgb(241, 6, 6);
+}
 /* Footer Section */
 .main_footer {
   background-color: #1E1E1E;
@@ -436,6 +430,7 @@ main .card-body p {
 .download {
   width: 200px;
 }
+
 
 .download button {
   background: none;
@@ -540,4 +535,5 @@ main .card-body p {
       flex-wrap: wrap;
       justify-content: center;
   }
+  
 }
