@@ -1,15 +1,16 @@
-/* umumiy sozlamalar */
+/* Umumiy sozlamalar */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
-/* header uslubi */
-header {
-    background-color: #F2F2F2;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Header uslubi */
+header.news-section {
+  background-color: #F2F2F2;
+  padding: 40px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header__title {
@@ -17,21 +18,21 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .header__title h5 {
-    font-family: 'Courier New', monospace;
-    font-size: 1.2rem; 
-    color: #00B207;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    width: fit-content;
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  color: #00B207;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .header__title h1 {
-    font-size: 2.5rem;
-    color: #333;
+  font-size: 2.5rem;
+  color: #333;
 }
 
 .news__wrapper {
@@ -46,227 +47,296 @@ header {
   background: #FFFFFF;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.card-image-wrapper {
+  position: relative;
+}
 
+.card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
 
-/* main bo'limi uchun umumiy stil */
+.comment-count {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #00B207;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.all-icon {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icons img {
+  width: 16px;
+  height: 16px;
+}
+
+.icons span {
+  font-size: 14px;
+  color: #666;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #2C742F;
+  font-weight: bold;
+}
+
+.card-footer a {
+  color: #00B207;
+  font-weight: bold;
+}
+
+/* Main bo'limi uchun umumiy stil */
 main {
-    width: 100%;
-    padding: 20px;
-  }
-  
-  /* .first divni markazlashtirish */
-  main .first {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    gap: 20px;
-  }
-  
-  /* "Testimonial" yozuvi uchun rang va o'lcham */
-  main .first_div h5 {
-    font-size: 18px;
-    color: #00B207; 
-  }
-  
-  main .first_div h1 {
-    font-size: 36px;
-    color: #333;
-  }
+  width: 100%;
+  padding: 40px 0;
+  background-color: #fff;
+}
 
-  .first_div h5, .first_div h1 {
-    transform: translateX(-195px);
-  }
-  
-  /* .second div ichidagi rasmlarni markazlashtirish va ozgina surish */
-  main .second.div {
-    display: flex;
-    gap: 10px;
-    transform: translateX(190px);
-  }
-  
-  /* Rasm o'lchamlarini kattalashtirish */
-  main .second.div img {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-  }
-  
-  /* Kartalarni markazlashtirish */
-  main .d-flex {
-    display: flex;
-    justify-content: center; 
-    gap: 30px; 
-  }
-  
-  /* Rasm orqasidagi fonni olib tashlash */
-  main img {
-    background-color: transparent !important;
-  }
-  
-  main .card {
-    width: 18rem;
-  }
-  
-  main .card-body {
-    padding: 20px;
-  }
-  
-  main .card-title img {
-    width: 25px;
-    height: 25px;
-  }
-  
-  main .card-text {
-    font-size: 14px;
-    color: #555;
-  }
-  
-  main .btn img {
-    width: 20px;
-    height: 20px;
-  }
-  
-  main .card-body h6 {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  main .card-body p {
-    font-size: 14px;
-    color: #888;
-  }
-  
-  main .card-body img {
-    width: 20px;
-    height: 20px;
-  }
+.main_container {
+  position: relative;
+}
 
-  .div-section_1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* flex-wrap: wrap; */
-    gap: 150px; 
-    padding: 20px;
-  }
-  
-  .div-section_1 img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .div-section_1 img:hover {
-    transform: scale(1.1);
-  }
-  
-  .div-section_2 {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 20px;
-  }
-  
-  /* Har bir box ichidagilar ustma-ust joylashadi */
-  .div-box_1,
-  .div-box_2,
-  .div-box_3 {
-    flex: 1 1 300px; 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 20px;
-    border: 2px solid #ccc; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Rasmlar o‘ng yuqorida bo‘lishi uchun */
-  .div-box_1 img,
-  .div-box_2 img,
-  .div-box_3 img {
-    align-self: flex-start;
-    width: 50px;
-    height: 50px;
-    
-  }
-  
-  /* sarlavhalar rasm tagidan chiqadi */
-  .div-box_1 h2,
-  .div-box_2 h2,
-  .div-box_3 h2 {
-    font-size: 1.2rem;
-    color: #333;
-    margin: 0;
-  }
-  
-  /* Manzil matni */
-  .div-box_1 address {
-    font-style: normal;
-    font-size: 0.95rem;
-    color: #666;
-  }
-  
-  /* Telefon matni */
-  .div-box_2 a {
-    color: #00B207;
-    text-decoration: none;
-    font-size: 2rem;
-  }
-  
-  .div-box_2 a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Subscribe formasi */
-  .subscribe-box {
-    display: flex;
-    gap: 10px;
-    width: 100%;
-  }
-  
-  .subscribe-box input[type="email"] {
-    flex: 1;
-    padding: 10px 12px 10px 40px; 
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 0.95rem;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%2300B207" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12 13.5l8-6.5H4l8 6.5zm0 2.5L4 9v10h16V9l-8 7z" /></svg>');
-    background-repeat: no-repeat;
-    background-position: 12px center;
-    background-size: 20px 20px;
-  }
-  
-  .subscribe-box button {
-    padding: 10px 16px;
-    background-color: #00B207;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-  
-  .subscribe-box button:hover {
-    background-color: #009a06;
-  }
+main .first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
 
+main .first_div {
+  padding-left: 19rem;
+}
 
+main .first_div h5 {
+  
+  font-size: 18px;
+  color: #00B207;
+  
+}
 
+main .first_div h1 {
+  font-size: 36px;
+  color: #333;
+  justify-content: center;
+  text-align: center;
+}
 
+.first_div h5, .first_div h1 {
+  transform: none;
+  
+}
 
+main .second {
+  display: flex;
+  gap: 10px;
+  padding-right: 17rem;
+}
 
+main .second img {
+  width: 40px;
+  height: 40px;
+  background-color: #00B207;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
-  /* Footer Section */
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
 
+main .card {
+  width: 424px;
+  height: 254px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-  /* Main Footer Styles */
+main .card-body {
+  padding: 20px;
+}
+
+.quote-icon {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 10px;
+}
+
+main .card-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.customer-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.customer-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+main .card-body h6 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+main .card-body p {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+.rating-stars {
+  width: 100px;
+  height: 20px;
+}
+
+/* Aside Section */
+.aside_container {
+  padding: 40px 0;
+}
+
+.div-section_1.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  padding: 20px;
+}
+
+.div-section_1 img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.div-section_1 img:hover {
+  transform: scale(1.1);
+}
+
+.div-section_2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+}
+
+.div-box_1, .div-box_2, .div-box_3 {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.div-box_1 img, .div-box_2 img, .div-box_3 img {
+  align-self: flex-start;
+  width: 50px;
+  height: 50px;
+}
+
+.div-box_1 h2, .div-box_2 h2, .div-box_3 h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.div-box_1 address {
+  font-style: normal;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.div-box_2 a {
+  color: #00B207;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.div-box_2 a:hover {
+  text-decoration: underline;
+}
+
+.subscribe-box {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.subscribe-box input[type="email"] {
+  flex: 1;
+  padding: 10px 12px 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%2300B207" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12 13.5l8-6.5H4l8 6.5zm0 2.5L4 9v10h16V9l-8 7z" /></svg>');
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 20px 20px;
+}
+
+.subscribe-box button {
+  padding: 10px 16px;
+  background-color: #00B207;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.subscribe-box button:hover {
+  background-color: #009a06;
+}
+
+/* Footer Section */
 .main_footer {
   background-color: #1E1E1E;
   color: white;
@@ -274,7 +344,6 @@ main {
   font-family: Arial, sans-serif;
 }
 
-/* Logo section */
 .footer_1 {
   display: flex;
   flex-direction: column;
@@ -290,6 +359,8 @@ main {
 
 .footer-item_1 img {
   margin-bottom: 15px;
+  width: 60px;
+  height: 60px;
 }
 
 .footer-item_1 p {
@@ -299,7 +370,6 @@ main {
   margin: 0;
 }
 
-/* Social media icons */
 .footer-item_2 {
   display: flex;
   gap: 15px;
@@ -320,7 +390,6 @@ main {
   background-color: #4CAF50;
 }
 
-/* Navigation columns layout */
 .footer-item_3 {
   display: flex;
   justify-content: space-between;
@@ -368,7 +437,6 @@ main {
   width: 200px;
 }
 
-/* Download buttons */
 .download button {
   background: none;
   border: none;
@@ -384,7 +452,6 @@ main {
   border-radius: 6px;
 }
 
-/* Copyright and payment methods section */
 .footer-item_4 {
   display: flex;
   justify-content: space-between;
@@ -415,37 +482,62 @@ main {
 /* Responsive design */
 @media screen and (max-width: 1200px) {
   .main_footer {
-    padding: 50px 40px 30px;
+      padding: 50px 40px 30px;
   }
   
   .footer-item_3 {
-    flex-wrap: wrap;
-    gap: 30px;
+      flex-wrap: wrap;
+      gap: 30px;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .news__wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 100%;
+      max-width: 424px;
+  }
+
+  .testimonial-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  main .card {
+      width: 100%;
+      max-width: 424px;
+  }
+
+  .div-section_1.features {
+      gap: 50px;
+      flex-wrap: wrap;
+  }
+
   .main_footer {
-    padding: 40px 20px 20px;
+      padding: 40px 20px 20px;
   }
   
   .footer-item_3 {
-    flex-direction: column;
-    gap: 30px;
+      flex-direction: column;
+      gap: 30px;
   }
   
   .my_account, .helps, .Proxy, .download {
-    width: 100%;
+      width: 100%;
   }
   
   .footer-item_4 {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
   }
   
   .partners {
-    flex-wrap: wrap;
-    justify-content: center;
+      flex-wrap: wrap;
+      justify-content: center;
   }
 }
