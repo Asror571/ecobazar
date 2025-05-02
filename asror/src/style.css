@@ -19,7 +19,8 @@ header{
     padding: 5px 20px;
     font-size: 14px;
     color: #333;
-    gap: 70rem;
+    width: 100%;
+    padding: 40px 300px;
 }
 
 
@@ -48,6 +49,8 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
+    width: 100%;
+    padding: 40px 300px;
 }
 
 .main-nav ul {
