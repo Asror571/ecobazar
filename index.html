@@ -15,63 +15,1583 @@
 <body>
     <!--Asror-->
     <!--Bu codeni men yozganman teginlaraling  o'ldiraman-->
-    <!-- <section first-part>
-        <header>
-            <nav>
-                <div class="top-bar">
-                    <span><img src="./asror/svg/Contact (1).svg" alt=""></span>
-                    <div class="language-currency">
-                        <select id="lang">
-                            <option value="eng">ENG</option>
-                            <option value="rus">RUS</option>
-                        </select>
-                        <select id="lang">
-                            <option value="rus">RUS</option>
-                            <option value="eng">ENG</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="main-nav">
-                    <ul>
-                        <select id="lang">
-                            <option value="eng">Home</option>
-                            <option value="rus">Home</option>
-                        </select>
-                        <select id="lang">
-                            <option value="eng">Shop</option>
-                            <option value="rus">Shop</option>
-                        </select>
-                        <select id="lang">
-                            <option value="eng">Pages</option>
-                            <option value="rus">Pages</option>
-                        </select>
-                        <select id="lang">
-                            <option value="eng">Blog</option>
-                            <option value="rus">Blog</option>
-                        </select>
-                        <select id="lang">
-                            <option value="eng">About Us</option>
-                            <option value="rus">About Us</option>
-                        </select>
-                    </ul>
-                    <div class="logo">
-                        <a href="#"><img src="./asror/svg/Logo.svg" alt=""></a>
-                    </div>
-                    <div class="call">
-                        <a href="#"><img src="./asror/svg/Call Now.svg" alt="Wishlist"></a>
-                    </div>
-                    <div class="contact-icons">
-                        <a href="#"><img src="./asror/svg/Search.svg" alt="Cart"></a>
-                        <a href="#"><img src="./asror/svg/Heart.svg" alt="User"></a>
-                        <a href="#"><img src="./asror/svg/Cart.svg" alt="User"></a>
-                        <a href="#"><img src="./asror/svg/Group.svg" alt="User"></a>
-                    </div>
-                </div>
-            </nav>
-        </header>
+   
+        <style>
+            /* Reset and Base Styles */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Inter', sans-serif;
+            }
+    
+            :root {
+                --primary-color: #00B207;
+                --secondary-color: #2C742F;
+                --text-color: #1A1A1A;
+                --light-text: #666666;
+                --bg-color: #FFFFFF;
+                --light-bg: #f7f7f7;
+                --border-color: #E6E6E6;
+                --star-color: #FF8A00;
+                --discount-color: #DB4444;
+                --transition: all 0.3s ease;
+            }
+    
+            [data-theme="dark"] {
+                --primary-color: #4caf50;
+                --secondary-color: #5cb85c;
+                --text-color: #f0f0f0;
+                --light-text: #d0d0d0;
+                --bg-color: #121212;
+                --light-bg: #222222;
+                --border-color: #333333;
+            }
+    
+            body {
+                background-color: var(--bg-color);
+                color: var(--text-color);
+                transition: var(--transition);
+                overflow-x: hidden;
+            }
+    
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+    
+            ul {
+                list-style: none;
+            }
+    
+            img {
+                max-width: 100%;
+            }
+    
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 15px;
+            }
+    
+            .flex {
+                display: flex;
+            }
+    
+            .flex-wrap {
+                flex-wrap: wrap;
+            }
+    
+            .justify-between {
+                justify-content: space-between;
+            }
+    
+            .justify-center {
+                justify-content: center;
+            }
+    
+            .align-center {
+                align-items: center;
+            }
+    
+            .text-center {
+                text-align: center;
+            }
+    
+            .btn {
+                display: inline-flex;
+                align-items: center;
+                padding: 10px 20px;
+                border-radius: 43px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: var(--transition);
+            }
+    
+            .btn-primary {
+                background-color: var(--primary-color);
+                color: white;
+            }
+    
+            .btn-primary:hover {
+                background-color: var(--secondary-color);
+            }
+    
+            .btn-outline {
+                border: 1px solid var(--primary-color);
+                color: var(--primary-color);
+                background-color: transparent;
+            }
+    
+            .btn-outline:hover {
+                background-color: var(--primary-color);
+                color: white;
+            }
+    
+            .btn-icon {
+                margin-left: 8px;
+            }
+    
+            /* Splash Screen */
+            .splash-screen {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(192, 239, 192);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 9999;
+                transition: opacity 0.5s ease;
+            }
 
-    </section>
- -->
+    
+            .splash-logo {
+                width: 150px;
+                animation: pulse 2s infinite;
+            }
+    
+            @keyframes pulse {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.1);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+    
+            /* Header Styles */
+            .top-header {
+                background-color: var(--light-bg);
+                padding: 10px 0;
+                font-size: 14px;
+                border-bottom: 1px solid var(--border-color);
+            }
+    
+            .top-header-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+    
+            .location-info {
+                display: flex;
+                align-items: center;
+            }
+    
+            .location-icon {
+                margin-right: 8px;
+                color: var(--primary-color);
+            }
+    
+            .language-currency {
+                display: flex;
+                align-items: center;
+            }
+    
+            .language-selector, .currency-selector {
+                margin-left: 20px;
+                position: relative;
+                cursor: pointer;
+            }
+    
+            .language-selector:after, .currency-selector:after {
+                content: '';
+                display: inline-block;
+                width: 0;
+                height: 0;
+                margin-left: 7px;
+                vertical-align: middle;
+                border-top: 4px solid;
+                border-right: 4px solid transparent;
+                border-left: 4px solid transparent;
+            }
+    
+            .main-header {
+                padding: 15px 0;
+                background-color: var(--bg-color);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+    
+            .header-content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+    
+            .logo {
+                display: flex;
+                align-items: center;
+            }
+    
+            .logo img {
+                height: 40px;
+            }
+    
+            .nav-menu {
+                display: flex;
+                margin: 0 20px;
+            }
+    
+            .nav-item {
+                margin: 0 15px;
+                position: relative;
+            }
+    
+            .nav-link {
+                font-weight: 500;
+                padding: 5px 0;
+                position: relative;
+            }
+    
+            .nav-link:after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: var(--primary-color);
+                transition: width 0.3s ease;
+            }
+    
+            .nav-link:hover:after,
+            .nav-link.active:after {
+                width: 100%;
+            }
+    
+            .nav-link.has-dropdown:after {
+                content: '';
+                display: inline-block;
+                width: 0;
+                height: 0;
+                margin-left: 7px;
+                vertical-align: middle;
+                border-top: 4px solid;
+                border-right: 4px solid transparent;
+                border-left: 4px solid transparent;
+                position: static;
+            }
+    
+            .header-actions {
+                display: flex;
+                align-items: center;
+            }
+    
+            .action-item {
+                margin-left: 20px;
+                position: relative;
+                cursor: pointer;
+            }
+    
+            .badge {
+                position: absolute;
+                top: -8px;
+                right: -8px;
+                background-color: var(--primary-color);
+                color: white;
+                font-size: 10px;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .search-box {
+                position: relative;
+                width: 200px;
+            }
+    
+            .search-input {
+                width: 100%;
+                padding: 8px 30px 8px 15px;
+                border: 1px solid var(--border-color);
+                border-radius: 43px;
+                background-color: var(--light-bg);
+                transition: var(--transition);
+            }
+    
+            .search-input:focus {
+                outline: none;
+                border-color: var(--primary-color);
+            }
+    
+            .search-btn {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: var(--light-text);
+            }
+    
+            /* Hero Section */
+            .hero-section {
+                padding: 40px 0;
+                background-color: var(--light-bg);
+                position: relative;
+                overflow: hidden;
+            }
+    
+            .hero-slider {
+                position: relative;
+            }
+    
+            .slider-item {
+                display: none;
+            }
+    
+            .slider-item.active {
+                display: flex;
+                animation: fadeIn 0.5s ease;
+            }
+    
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+    
+            .slider-content {
+                flex: 1;
+                padding: 30px;
+            }
+    
+            .slider-image {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .slider-image img {
+                max-width: 100%;
+                max-height: 400px;
+            }
+    
+            .slider-title {
+                font-size: 16px;
+                color: var(--primary-color);
+                margin-bottom: 15px;
+            }
+    
+            .slider-heading {
+                font-size: 42px;
+                line-height: 1.2;
+                margin-bottom: 20px;
+            }
+    
+            .slider-price {
+                font-size: 24px;
+                font-weight: 600;
+                color: var(--primary-color);
+                margin-bottom: 20px;
+            }
+    
+            .slider-price span {
+                color: var(--light-text);
+                text-decoration: line-through;
+                font-weight: normal;
+                margin-left: 10px;
+            }
+    
+            .slider-description {
+                color: var(--light-text);
+                margin-bottom: 30px;
+            }
+    
+            .slider-nav {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+            }
+    
+            .slider-dot {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: var(--border-color);
+                margin: 0 5px;
+                cursor: pointer;
+                transition: var(--transition);
+            }
+    
+            .slider-dot.active {
+                background-color: var(--primary-color);
+            }
+    
+            .slider-arrows {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                transform: translateY(-50%);
+                z-index: 1;
+            }
+    
+            .slider-arrow {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: var(--transition);
+            }
+    
+            .slider-arrow:hover {
+                background-color: var(--primary-color);
+                color: white;
+            }
+    
+            .left-arrow {
+                margin-left: 20px;
+            }
+    
+            .right-arrow {
+                margin-right: 20px;
+            }
+    
+            /* Features Section */
+            .features-section {
+                padding: 40px 0;
+                background-color: var(--bg-color);
+            }
+    
+            .features-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+    
+            .feature-card {
+                padding: 20px;
+                border-radius: 8px;
+                background-color: var(--light-bg);
+                text-align: center;
+                transition: var(--transition);
+            }
+    
+            .feature-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+    
+            .feature-icon {
+                width: 60px;
+                height: 60px;
+                margin: 0 auto 15px;
+                border-radius: 50%;
+                background-color: var(--primary-color);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+            }
+    
+            .feature-title {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+    
+            .feature-description {
+                color: var(--light-text);
+                font-size: 14px;
+            }
+    
+            /* Products Section */
+            .products-section {
+                padding: 40px 0;
+            }
+    
+            .section-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+            }
+    
+            .section-title {
+                font-size: 24px;
+                font-weight: 600;
+            }
+    
+            .view-all {
+                display: flex;
+                align-items: center;
+                color: var(--primary-color);
+                font-weight: 500;
+            }
+    
+            .view-all-icon {
+                margin-left: 5px;
+            }
+    
+            .products-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+    
+            .product-card {
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                overflow: hidden;
+                transition: var(--transition);
+                position: relative;
+            }
+    
+            .product-card:hover {
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+    
+            .product-image {
+                height: 200px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--light-bg);
+                position: relative;
+            }
+    
+            .product-image img {
+                max-height: 100%;
+                max-width: 100%;
+                object-fit: cover;
+                
+            }
+    
+            .product-discount {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                background-color: var(--discount-color);
+                color: white;
+                padding: 5px 10px;
+                border-radius: 4px;
+                font-size: 12px;
+            }
+    
+            .product-wishlist {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: var(--transition);
+            }
+    
+            .product-wishlist:hover {
+                color: var(--discount-color);
+            }
+    
+            .product-add-cart {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: var(--primary-color);
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: var(--transition);
+            }
+    
+            .product-add-cart:hover {
+                background-color: var(--secondary-color);
+            }
+    
+            .product-content {
+                padding: 15px;
+            }
+    
+            .product-category {
+                color: var(--light-text);
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+    
+            .product-title {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+    
+            .product-rating {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+    
+            .rating-stars {
+                color: var(--star-color);
+                margin-right: 5px;
+            }
+    
+            .rating-count {
+                color: var(--light-text);
+                font-size: 12px;
+            }
+    
+            .product-price {
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+            }
+    
+            .current-price {
+                color: var(--primary-color);
+            }
+    
+            .old-price {
+                color: var(--light-text);
+                text-decoration: line-through;
+                margin-left: 10px;
+                font-size: 14px;
+            }
+    
+            /* Categories Section */
+            .categories-section {
+                padding: 40px 0;
+                background-color: var(--light-bg);
+            }
+    
+            .categories-container {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                gap: 20px;
+            }
+    
+            .category-card {
+                background-color: var(--bg-color);
+                border-radius: 8px;
+                text-align: center;
+                padding: 20px;
+                transition: var(--transition);
+                cursor: pointer;
+            }
+    
+            .category-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+    
+            .category-icon {
+                width: 60px;
+                height: 60px;
+                margin: 0 auto 15px;
+            }
+    
+            .category-title {
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+    
+            .category-count {
+                color: var(--light-text);
+                font-size: 14px;
+            }
+    
+            /* About Section */
+            .about-section {
+                padding: 60px 0;
+                background-color: var(--bg-color);
+            }
+    
+            .about-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+    
+            .about-images {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+    
+            .about-image {
+                border-radius: 8px;
+                overflow: hidden;
+            }
+    
+            .about-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+    
+            .about-content {
+                padding: 20px;
+            }
+    
+            .about-title {
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+    
+            .about-description {
+                color: var(--light-text);
+                margin-bottom: 20px;
+                line-height: 1.6;
+            }
+    
+            .about-features {
+                margin-bottom: 30px;
+            }
+    
+            .about-feature {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+            }
+    
+            .feature-icon-small {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                color: var(--primary-color);
+            }
+
+    
+            /* Dark mode toggle */
+            .dark-mode-toggle {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: var(--primary-color);
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                z-index: 100;
+                transition: var(--transition);
+            }
+    
+            .dark-mode-toggle:hover {
+                transform: scale(1.1);
+            }
+    
+            /* Responsive Styles */
+            @media (max-width: 992px) {
+                .nav-menu {
+                    display: none;
+                }
+    
+                .products-container,
+                .features-container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+    
+                .categories-container {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+    
+                .about-container {
+                    grid-template-columns: 1fr;
+                }
+    
+                .footer-top {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+    
+            @media (max-width: 768px) {
+                .slider-content,
+                .slider-image {
+                    flex: 1 0 100%;
+                }
+    
+                .slider-item.active {
+                    flex-direction: column;
+                }
+    
+                .categories-container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+    
+                .footer-top {
+                    grid-template-columns: 1fr;
+                }
+            }
+    
+            @media (max-width: 576px) {
+                .products-container,
+                .features-container,
+                .categories-container {
+                    grid-template-columns: 1fr;
+                }
+    
+                .slider-heading {
+                    font-size: 28px;
+                }
+    
+                .top-header-content {
+                    flex-direction: column;
+                    align-items: center;
+                }
+    
+                .language-currency {
+                    margin-top: 10px;
+              
+            }
+        </style>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Splash Screen -->
+        <div class="splash-screen">
+            <div class="splash-content">
+                <div class="splash-logo">
+                    <!-- SVG placeholder for logo -->
+                    <div style="width: 150px; height: 150px;  border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">
+                        <img src="/asror/svg/Logo.svg" alt="">
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    
+        <!-- Header -->
+        <header>
+            <div class="top-header">
+                <div class="container">
+                    <div class="top-header-content">
+                        <div class="location-info">
+                            <span class="location-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </span>
+                            <span>Store Location: Lincoln - 344, Illinois, Chicago, USA</span>
+                        </div>
+                        <div class="language-currency">
+                            <div class="language-selector">
+                                <span>Eng</span>
+                            </div>
+                            <div class="currency-selector">
+                                <span>USD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-header">
+                <div class="container">
+                    <div class="header-content">
+                     
+                        <nav>
+                            <ul class="nav-menu">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link active">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link has-dropdown">Shop</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link has-dropdown">Pages</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link has-dropdown">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">About Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="logo">
+                            <!-- SVG placeholder for logo -->
+                             <img src="/asror/svg/Logo.svg" alt="">
+                        </div>
+                        <div class="header-actions">
+                            <div class="search-box">
+                                <input type="text" class="search-input" placeholder="Search...">
+                                <button class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="action-item">
+                                <i class="far fa-heart"></i>
+                                <span class="badge">0</span>
+                            </div>
+                            <div class="action-item">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="badge">0</span>
+                            </div>
+                            <div class="action-item">
+                                <i class="far fa-user"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-slider">
+                    <div class="slider-item active">
+                        <div class="slider-content">
+                            <h3 class="slider-title">WELCOME TO ECOBAZAR</h3>
+                            <h1 class="slider-heading">Fresh & Healthy Organic Food</h1>
+                            <div class="slider-price">
+                                Sale up to 30% OFF
+                            </div>
+                            <p class="slider-description">Free shipping on all your order. we deliver, you enjoy</p>
+                            <a href="#" class="btn btn-primary">
+                                Shop now
+                                <span class="btn-icon">
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="slider-image">
+                            <img src="/zarnigor/image/organic-pic.png" alt="Fresh Vegetables">
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <div class="slider-content">
+                            <h3 class="slider-title">ORGANIC VEGETABLES</h3>
+                            <h1 class="slider-heading">Healthy Vegetables for Your Family</h1>
+                            <div class="slider-price">
+                                Sale up to 25% OFF
+                            </div>
+                            <p class="slider-description">Get fresh vegetables delivered to your doorstep</p>
+                            <a href="#" class="btn btn-primary">
+                                Shop now
+                                <span class="btn-icon">
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="slider-image">
+                            <img src="/zarnigor/image/fresh-veg.png" alt="Organic Vegetables">
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <div class="slider-content">
+                            <h3 class="slider-title">FRESH FRUITS</h3>
+                            <h1 class="slider-heading">Natural Fruits for Better Health</h1>
+                            <div class="slider-price">
+                                Sale up to 20% OFF
+                            </div>
+                            <p class="slider-description">Sweet and juicy fruits for your daily nutrition</p>
+                            <a href="#" class="btn btn-primary">
+                                Shop now
+                                <span class="btn-icon">
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="slider-image">
+                            <img src="/zarnigor/image/fresh-fr.png" alt="Fresh Fruits">
+                        </div>
+                    </div>
+                    <div class="slider-arrows">
+                        <div class="slider-arrow left-arrow">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="slider-arrow right-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <div class="slider-dot active"></div>
+                        <div class="slider-dot"></div>
+                        <div class="slider-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+    
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="features-container">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 class="feature-title">Free Shipping</h3>
+                        <p class="feature-description">Free shipping with discount</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="feature-title">Great Support 24/7</h3>
+                        <p class="feature-description">Instant access to Contact</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">100% Secure Payment</h3>
+                        <p class="feature-description">We ensure your money is safe</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-undo"></i>
+                        </div>
+                        <h3 class="feature-title">Money-Back Guarantee</h3>
+                        <p class="feature-description">30 days money-back</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+        <!-- Featured Products Section -->
+        <section class="products-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Products</h2>
+                    <a href="#" class="view-all">
+                        View All
+                        <span class="view-all-icon">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="products-container">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/zarnigor/image/applee.png" alt="Green Apple">
+                            <div class="product-discount">Sale 50%</div>
+                            <div class="product-wishlist">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-add-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-category">Fresh Fruit</div>
+                            <h3 class="product-title">Green Apple</h3>
+                            <div class="product-rating">
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="rating-count">(4.0)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="current-price">$14.99</div>
+                                <div class="old-price">$20.99</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/zarnigor/image/cabbage-chinese.png" alt="Chinese Cabbage">
+                            <div class="product-wishlist">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-add-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-category">Vegetables</div>
+                            <h3 class="product-title">Chinese Cabbage</h3>
+                            <div class="product-rating">
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="rating-count">(4.5)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="current-price">$14.99</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/zarnigor/image/balgarski.png" alt="Green Capsicum">
+                            <div class="product-wishlist">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-add-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-category">Vegetables</div>
+                            <h3 class="product-title">Green Capsicum</h3>
+                            <div class="product-rating">
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="rating-count">(5.0)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="current-price">$14.99</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/zarnigor/image/green-chili.png" alt="Ladies Finger">
+                            <div class="product-wishlist">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-add-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-category">Vegetables</div>
+                            <h3 class="product-title">Ladies Finger</h3>
+                            <div class="product-rating">
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="rating-count">(4.0)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="current-price">$14.99</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Shop by Top Categories</h2>
+                    <a href="#" class="view-all">
+                        View All
+                        <span class="view-all-icon">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="categories-container">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <img src="/zarnigor/image/vegetablee.png" alt="Vegetables">
+                        </div>
+                        <h3 class="category-title">Vegetables</h3>
+                        <p class="category-count">165 Products</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <img src="/zarnigor/image/fruits-1.png" alt="Fresh Fruit">
+                        </div>
+                        <h3 class="category-title">Fresh Fruit</h3>
+                        <p class="category-count">137 Products</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <img src="/zarnigor/image/fishh.png" alt="Fish">
+                        </div>
+                        <h3 class="category-title">Fish</h3>
+                        <p class="category-count">34 Products</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <img src="/zarnigor/image/meat-1.png" alt="Meat">
+                        </div>
+                        <h3 class="category-title">Meat</h3>
+                        <p class="category-count">165 Products</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <img src="/zarnigor/image/soft-drink.png" alt="Water and Drinks">
+                        </div>
+                        <h3 class="category-title">Water and Drinks</h3>
+                        <p class="category-count">48 Products</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <img src="/zarnigor/image/sncks.png" alt="Snacks">
+                        </div>
+                        <h3 class="category-title">Snacks</h3>
+                        <p class="category-count">165 Products</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-container">
+                    <div class="about-images">
+                        <div class="about-image">
+                            <img src="/zarnigor/image/man-older.png" alt="Farmer Holding Apples">
+                        </div>
+                        <div class="about-image">
+                            <img src="/zarnigor/image/man-tree.png" alt="Man with Fresh Produce">
+                        </div>
+                    </div>
+                    <div class="about-content">
+                        <h2 class="about-title">100% Trusted Organic Food Store</h2>
+                        <div class="about-features">
+                            <div class="about-feature">
+                                <div class="feature-icon-small">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p>Healthy & natural food for lovers of healthy food.</p>
+                            </div>
+                            <div class="about-feature">
+                                <div class="feature-icon-small">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p>Every day fresh and quality products for you.</p>
+                            </div>
+                        </div>
+                        <p class="about-description">
+                            At quis risus sed vulputate odio ut enim blandit volutpat. Nulla posuere sollicitudin aliquam ultrices. 
+                            Donec adipiscing tristique risus nec feugiat in fermentum. Sed ullamcorper morbi tincidunt ornare massa 
+                            eget. Bibendum est ultricies integer quis auctor elit sed vulputate. Nunc consequat interdum varius sit 
+                            amet mattis vulputate enim nulla. Nunc sem vel pretium felis.
+                        </p>
+                        <a href="#" class="btn btn-primary">
+                            Shop Now
+                            <span class="btn-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- 
+         Footer 
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-about">
+                        <div class="footer-logo">
+                            SVG placeholder for logo
+                            <div style="color: var(--primary-color); font-size: 24px; font-weight: bold;">
+                                <i class="fas fa-leaf"></i> Ecobazar
+                            </div>
+                        </div>
+                        <p class="footer-description">
+                            Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h3 class="footer-title">My Account</h3>
+                        <ul>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Order History</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">Shopping Cart</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3 class="footer-title">Information</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Delivery Information</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h3 class="footer-title">Contact</h3>
+                        <ul>
+                            <li>
+                                <span class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </span>
+                                <span>Lincoln - 344, Illinois, Chicago, USA</span>
+                            </li>
+                            <li>
+                                <span class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                                <span>(219) 555-0114</span>
+                            </li>
+                            <li>
+                                <span class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <span>info@ecobazar.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="copyright">© 2025, Ecobazar. All Rights Reserved</p>
+                    <div class="payment-methods">
+                        <div class="payment-method">
+                            <i class="fab fa-cc-visa"></i>
+                        </div>
+                        <div class="payment-method">
+                            <i class="fab fa-cc-mastercard"></i>
+                        </div>
+                        <div class="payment-method">
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                        <div class="payment-method">
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> -->
+    
+        <!-- Dark Mode Toggle -->
+        <div class="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    
+        <!-- JavaScript -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Splash Screen
+                setTimeout(function() {
+                    const splashScreen = document.querySelector('.splash-screen');
+                    splashScreen.style.opacity = '0';
+                    setTimeout(function() {
+                        splashScreen.style.display = 'none';
+                    }, 500);
+                }, 2000);
+    
+                // Hero Slider
+                const sliderItems = document.querySelectorAll('.slider-item');
+                const sliderDots = document.querySelectorAll('.slider-dot');
+                const prevArrow = document.querySelector('.left-arrow');
+                const nextArrow = document.querySelector('.right-arrow');
+                let currentSlide = 0;
+    
+                function showSlide(index) {
+                    sliderItems.forEach(item => item.classList.remove('active'));
+                    sliderDots.forEach(dot => dot.classList.remove('active'));
+                    
+                    sliderItems[index].classList.add('active');
+                    sliderDots[index].classList.add('active');
+                    currentSlide = index;
+                }
+    
+                function nextSlide() {
+                    let next = currentSlide + 1;
+                    if (next >= sliderItems.length) {
+                        next = 0;
+                    }
+                    showSlide(next);
+                }
+    
+                function prevSlide() {
+                    let prev = currentSlide - 1;
+                    if (prev < 0) {
+                        prev = sliderItems.length - 1;
+                    }
+                    showSlide(prev);
+                }
+    
+                // Auto slide
+                let slideInterval = setInterval(nextSlide, 5000);
+    
+                // Click events for arrows
+                nextArrow.addEventListener('click', function() {
+                    clearInterval(slideInterval);
+                    nextSlide();
+                    slideInterval = setInterval(nextSlide, 5000);
+                });
+    
+                prevArrow.addEventListener('click', function() {
+                    clearInterval(slideInterval);
+                    prevSlide();
+                    slideInterval = setInterval(nextSlide, 5000);
+                });
+    
+                // Click events for dots
+                sliderDots.forEach((dot, index) => {
+                    dot.addEventListener('click', function() {
+                        clearInterval(slideInterval);
+                        showSlide(index);
+                        slideInterval = setInterval(nextSlide, 5000);
+                    });
+                });
+    
+                // Dark Mode Toggle
+                const darkModeToggle = document.querySelector('.dark-mode-toggle');
+                const htmlElement = document.documentElement;
+                const darkModeIcon = darkModeToggle.querySelector('i');
+                
+                // Check if user has already set preference
+                if (localStorage.getItem('theme') === 'dark') {
+                    htmlElement.setAttribute('data-theme', 'dark');
+                    darkModeIcon.classList.remove('fa-moon');
+                    darkModeIcon.classList.add('fa-sun');
+                }
+    
+                darkModeToggle.addEventListener('click', function() {
+                    if (htmlElement.getAttribute('data-theme') === 'dark') {
+                        htmlElement.setAttribute('data-theme', 'light');
+                        localStorage.setItem('theme', 'light');
+                        darkModeIcon.classList.remove('fa-sun');
+                        darkModeIcon.classList.add('fa-moon');
+                    } else {
+                        htmlElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                        darkModeIcon.classList.remove('fa-moon');
+                        darkModeIcon.classList.add('fa-sun');
+                    }
+                });
+    
+                // Product Wishlist Toggle
+                const wishlistButtons = document.querySelectorAll('.product-wishlist');
+                wishlistButtons.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const icon = this.querySelector('i');
+                        if (icon.classList.contains('far')) {
+                            icon.classList.remove('far');
+                            icon.classList.add('fas');
+                            icon.style.color = '#DB4444';
+                        } else {
+                            icon.classList.remove('fas');
+                            icon.classList.add('far');
+                            icon.style.color = '';
+                        }
+                    });
+                });
+    
+                // Add to Cart Animation
+                const addToCartButtons = document.querySelectorAll('.product-add-cart');
+                addToCartButtons.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const cartBadge = document.querySelector('.header-actions .badge');
+                        const count = parseInt(cartBadge.textContent);
+                        cartBadge.textContent = count + 1;
+                        
+                        // Animation
+                        this.classList.add('added');
+                        setTimeout(() => {
+                            this.classList.remove('added');
+                        }, 300);
+                    });
+                });
+    
+                // Mobile Menu Toggle (for responsive design)
+                const mobileMenuToggle = document.createElement('div');
+                mobileMenuToggle.classList.add('mobile-menu-toggle');
+                mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                
+                const header = document.querySelector('.header-content');
+                header.insertBefore(mobileMenuToggle, document.querySelector('.nav-menu'));
+    
+                mobileMenuToggle.addEventListener('click', function() {
+                    const navMenu = document.querySelector('.nav-menu');
+                    navMenu.classList.toggle('active');
+                });
+    
+                // Add responsive styles for mobile menu
+                const style = document.createElement('style');
+                style.textContent = `
+                    @media (max-width: 992px) {
+                        .mobile-menu-toggle {
+                            display: block;
+                            font-size: 24px;
+                            cursor: pointer;
+                        }
+                        .nav-menu {
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            width: 100%;
+                            background-color: var(--bg-color);
+                            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                            padding: 20px;
+                            flex-direction: column;
+                        }
+                        .nav-menu.active {
+                            display: flex;
+                        }
+                        .nav-item {
+                            margin: 10px 0;
+                        }
+                        .product-add-cart.added {
+                            transform: scale(1.2);
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+            });
+        </script>
+
+
+
+
+
+
+
+
+
 
 
 
