@@ -1,0 +1,441 @@
+/* umumiy sozlamalar */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.Main_container {
+  padding: 40px 300px;
+}
+
+/* header uslubi */
+header {
+    background-color: #fff;
+    padding: 40px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header h5 {
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    color: #00B207;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: auto; 
+    margin-right: 90px;
+    width: fit-content;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* main bo'limi uchun umumiy stil */
+main {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* .first divni markazlashtirish */
+  main .first {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px;
+  }
+  
+  /* "Testimonial" yozuvi uchun rang va o'lcham */
+  main .first_div h5 {
+    font-size: 18px;
+    color: #00B207; 
+  }
+  
+  main .first_div h1 {
+    font-size: 36px;
+    color: #333;
+  }
+
+  .first_div h5, .first_div h1 {
+    transform: translateX(-195px);
+  }
+  
+  /* .second div ichidagi rasmlarni markazlashtirish va ozgina surish */
+  main .second.div {
+    display: flex;
+    gap: 10px;
+    transform: translateX(190px);
+  }
+  
+  /* Rasm o'lchamlarini kattalashtirish */
+  main .second.div img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  /* Kartalarni markazlashtirish */
+  main .d-flex {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+  }
+  
+  /* Rasm orqasidagi fonni olib tashlash */
+  main img {
+    background-color: transparent !important;
+  }
+  
+  main .card {
+    width: 18rem;
+  }
+  
+  main .card-body {
+    padding: 20px;
+  }
+  
+  main .card-title img {
+    width: 25px;
+    height: 25px;
+  }
+  
+  main .card-text {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  main .btn img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  main .card-body h6 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  main .card-body p {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  main .card-body img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .div-section_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 150px; 
+    padding: 20px;
+  }
+  
+  .div-section_1 img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .div-section_1 img:hover {
+    transform: scale(1.1);
+  }
+  
+  .div-section_2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  /* Har bir box ichidagilar ustma-ust joylashadi */
+  .div-box_1,
+  .div-box_2,
+  .div-box_3 {
+    flex: 1 1 300px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Rasmlar o‘ng yuqorida bo‘lishi uchun */
+  .div-box_1 img,
+  .div-box_2 img,
+  .div-box_3 img {
+    align-self: flex-start;
+    width: 50px;
+    height: 50px;
+    
+  }
+  
+  /* sarlavhalar rasm tagidan chiqadi */
+  .div-box_1 h2,
+  .div-box_2 h2,
+  .div-box_3 h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Manzil matni */
+  .div-box_1 address {
+    font-style: normal;
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+  /* Telefon matni */
+  .div-box_2 a {
+    color: #00B207;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+  
+  .div-box_2 a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Subscribe formasi */
+  .subscribe-box {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .subscribe-box input[type="email"] {
+    flex: 1;
+    padding: 10px 12px 10px 40px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%2300B207" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12 13.5l8-6.5H4l8 6.5zm0 2.5L4 9v10h16V9l-8 7z" /></svg>');
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    background-size: 20px 20px;
+  }
+  
+  .subscribe-box button {
+    padding: 10px 16px;
+    background-color: #00B207;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .subscribe-box button:hover {
+    background-color: #009a06;
+  }
+
+
+
+
+
+
+
+  /* Footer Section */
+
+
+  /* Main Footer Styles */
+.main_footer {
+  background-color: #1E1E1E;
+  color: white;
+  padding: 50px 80px 30px;
+  font-family: Arial, sans-serif;
+}
+
+/* Logo section */
+.footer_1 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.footer-item_1 h1 {
+  color: white;
+  font-size: 28px;
+  margin: 0 0 15px 0;
+  font-weight: bold;
+}
+
+.footer-item_1 img {
+  margin-bottom: 15px;
+}
+
+.footer-item_1 p {
+  color: #9c9c9c;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Social media icons */
+.footer-item_2 {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footer-item_2 img {
+  background-color: #2c2c2c;
+  border-radius: 50%;
+  padding: 8px;
+  transition: background-color 0.3s;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.footer-item_2 img:hover {
+  background-color: #4CAF50;
+}
+
+/* Navigation columns layout */
+.footer-item_3 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.footer-item_3 h3 {
+  color: white;
+  font-size: 18px;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+.footer-item_3 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-item_3 ul li {
+  margin-bottom: 15px;
+}
+
+.footer-item_3 ul li a {
+  color: #9c9c9c;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-item_3 ul li a:hover {
+  color: #4CAF50;
+}
+
+.footer-item_3 ul li a b {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.my_account, .helps, .Proxy {
+  width: 150px;
+}
+
+.download {
+  width: 200px;
+}
+
+/* Download buttons */
+.download button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  display: block;
+}
+
+.download button img {
+  height: 40px;
+  border-radius: 6px;
+}
+
+/* Copyright and payment methods section */
+.footer-item_4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+.h4 h4 {
+  font-size: 14px;
+  color: #9c9c9c;
+  font-weight: normal;
+  margin: 0;
+}
+
+.partners {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.partners img, .partners svg {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1200px) {
+  .main_footer {
+    padding: 50px 40px 30px;
+  }
+  
+  .footer-item_3 {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main_footer {
+    padding: 40px 20px 20px;
+  }
+  
+  .footer-item_3 {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .my_account, .helps, .Proxy, .download {
+    width: 100%;
+  }
+  
+  .footer-item_4 {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .partners {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
