@@ -6,39 +6,49 @@ body {
     padding: 0;
 }
 
-.Main_container {
-  padding: 40px 300px;
-}
-
 /* header uslubi */
 header {
-    background-color: #fff;
-    padding: 40px 0;
+    background-color: #F2F2F2;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.header__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.header h5 {
+.header__title h5 {
     font-family: 'Courier New', monospace;
-    font-size: 1.2rem;
+    font-size: 1.2rem; 
     color: #00B207;
     margin-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-left: auto; 
-    margin-right: 90px;
     width: fit-content;
 }
 
-.header h1 {
+.header__title h1 {
     font-size: 2.5rem;
     color: #333;
 }
+
+.news__wrapper {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.card {
+  width: 424px;
+  height: 494px;
+  background: #FFFFFF;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+
 
 /* main bo'limi uchun umumiy stil */
 main {
