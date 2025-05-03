@@ -255,7 +255,7 @@ main .card-body p {
 }
 
 .div-box_1, .div-box_2, .div-box_3 {
-  flex: 1 1 300px;
+  flex: 1 1 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -280,7 +280,7 @@ main .card-body p {
 
 .div-box_1 address {
   font-style: normal;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #666;
 }
 
