@@ -4,6 +4,31 @@
     box-sizing: border-box;
 }
 
+
+:root {
+    --primary-color: #00B207;
+    --secondary-color: #2C742F;
+    --text-color: #1A1A1A;
+    --light-text: #666666;
+    --bg-color: #FFFFFF;
+    --light-bg: #f7f7f7;
+    --border-color: #E6E6E6;
+    --star-color: #FF8A00;
+    --discount-color: #DB4444;
+    --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+    --primary-color: #4caf50;
+    --secondary-color: #5cb85c;
+    --text-color: #f0f0f0;
+    --light-text: #d0d0d0;
+    --bg-color: #121212;
+    --light-bg: #222222;
+    --border-color: #333333;
+}
+
+
 .status {
     max-width: 100%;
     margin: 0 auto;
@@ -95,11 +120,11 @@
 
 }
 select {
-    appearance: none; /* Brauzerning standart ko‘rinishini olib tashlash */
-    background-color: #fcfbf9; /* Yog‘och rangi */
+    appearance: none;
+    background-color:  var(--bg-color);
     font-family: 'Arial', sans-serif;
     font-size: 16px;
-    padding: 10px 30px 10px 15px; /* O‘ng tarafdan strelka uchun joy */
+    padding: 10px 30px 10px 15px; 
     border-radius: 5px;
     background-image: url('data:image/svg+xml;utf8,<svg fill="%238b4513" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Strelka ikonkasi */
     background-repeat: no-repeat;
@@ -107,7 +132,10 @@ select {
     cursor: pointer;
     transition: all 0.3s ease;
     border: none;
+    color: var(--text-color);
 }
+
+
 
 select:hover {
     background-color: #a7a49e; 
@@ -140,11 +168,11 @@ select option:hover {
 }
 
 .selector {
-    appearance: none; /* Brauzer standart ko‘rinishini olib tashlash */
-    background-color: #faf9f8; /* Yog‘och rangi */
+    appearance: none; 
+    background-color: var(--bg-color);
     font-family: 'Arial', sans-serif;
     font-size: 14px;
-    padding: 8px 25px 8px 10px; /* Strelka uchun joy */
+    padding: 8px 25px 8px 10px; 
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     background-image: url('data:image/svg+xml;utf8,<svg fill="%238b4513" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Strelka */
@@ -156,7 +184,7 @@ select option:hover {
 }
 
 .selector:hover {
-    background-color: #99958d; /* Hover rangi */
+    background-color: #99958d;
     color: #fff;
 }
 
@@ -283,7 +311,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .shop-now {
         padding: 20px;
         grid-template-columns: 1fr;
@@ -297,7 +325,7 @@ font-family: 'Poppins', sans-serif;
     .banner .timer {
         justify-content: center;
     }
-} */
+}
 
 .leaf2{
         width: 50px;
@@ -355,7 +383,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .product-card {
-    background-color: #fff;
+    background-color: var(--bg-color);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -368,8 +396,6 @@ font-family: 'Poppins', sans-serif;
     transform: translateY(-5px);
     border: 1px solid #2C742F;
     box-shadow: 0px 0px 12px 0px #20B52652;
-
-
 }
 
 
@@ -377,8 +403,7 @@ font-family: 'Poppins', sans-serif;
 
 .product-image img {
     width: 100%;
-    height: auto;
-  
+    height: auto;  
 }
 
 
@@ -454,7 +479,7 @@ font-family: 'Poppins', sans-serif;
     height: 116px;
     display: flex;
     align-items: center;
-    background-color: #fff;
+    background-color:  var(--bg-color);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
