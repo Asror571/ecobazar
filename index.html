@@ -18,9 +18,6 @@
 <body>
     <!--Asror-->
     <!--Bu codeni men yozganman teginlaraling  o'ldiraman-->
-
-
-    <!-- Splash Screen -->
     <div class="splash-screen">
         <div class="splash-content">
             <div class="splash-logo">
@@ -120,7 +117,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="hero-slider">
@@ -204,7 +200,6 @@
 
 
 
-    <!-- Features Section -->
     <section class="features-section">
         <div class="container">
             <div class="features-container">
@@ -241,7 +236,6 @@
     </section>
 
 
-    <!-- Featured Products Section -->
     <section class="products-section">
         <div class="container">
             <div class="section-header">
@@ -369,7 +363,6 @@
     </section>
 
 
-    <!-- Categories Section -->
     <section class="categories-section">
         <div class="container">
             <div class="section-header">
@@ -428,7 +421,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about-section">
         <div class="container">
             <div class="about-container">
@@ -477,193 +469,17 @@
     </section>
 
 
-    <!-- Dark Mode Toggle -->
-    <div class="dark-mode-toggle">
-        <i class="fas fa-moon"></i>
-    </div>
 
-    <!-- JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Splash Screen
-            setTimeout(function () {
-                const splashScreen = document.querySelector('.splash-screen');
-                splashScreen.style.opacity = '0';
-                setTimeout(function () {
-                    splashScreen.style.display = 'none';
-                }, 500);
-            }, 2000);
 
-            // Hero Slider
-            const sliderItems = document.querySelectorAll('.slider-item');
-            const sliderDots = document.querySelectorAll('.slider-dot');
-            const prevArrow = document.querySelector('.left-arrow');
-            const nextArrow = document.querySelector('.right-arrow');
-            let currentSlide = 0;
 
-            function showSlide(index) {
-                sliderItems.forEach(item => item.classList.remove('active'));
-                sliderDots.forEach(dot => dot.classList.remove('active'));
 
-                sliderItems[index].classList.add('active');
-                sliderDots[index].classList.add('active');
-                currentSlide = index;
-            }
 
-            function nextSlide() {
-                let next = currentSlide + 1;
-                if (next >= sliderItems.length) {
-                    next = 0;
-                }
-                showSlide(next);
-            }
 
-            function prevSlide() {
-                let prev = currentSlide - 1;
-                if (prev < 0) {
-                    prev = sliderItems.length - 1;
-                }
-                showSlide(prev);
-            }
 
-            // Auto slide
-            let slideInterval = setInterval(nextSlide, 5000);
 
-            // Click events for arrows
-            nextArrow.addEventListener('click', function () {
-                clearInterval(slideInterval);
-                nextSlide();
-                slideInterval = setInterval(nextSlide, 5000);
-            });
 
-            prevArrow.addEventListener('click', function () {
-                clearInterval(slideInterval);
-                prevSlide();
-                slideInterval = setInterval(nextSlide, 5000);
-            });
-
-            sliderDots.forEach((dot, index) => {
-                dot.addEventListener('click', function () {
-                    clearInterval(slideInterval);
-                    showSlide(index);
-                    slideInterval = setInterval(nextSlide, 5000);
-                });
-            });
-
-            // Dark Mode Toggle
-            const darkModeToggle = document.querySelector('.dark-mode-toggle');
-            const htmlElement = document.documentElement;
-            const darkModeIcon = darkModeToggle.querySelector('i');
-
-            if (localStorage.getItem('theme') === 'dark') {
-                htmlElement.setAttribute('data-theme', 'dark');
-                darkModeIcon.classList.remove('fa-moon');
-                darkModeIcon.classList.add('fa-sun');
-            }
-
-            darkModeToggle.addEventListener('click', function () {
-                if (htmlElement.getAttribute('data-theme') === 'dark') {
-                    htmlElement.setAttribute('data-theme', 'light');
-                    localStorage.setItem('theme', 'light');
-                    darkModeIcon.classList.remove('fa-sun');
-                    darkModeIcon.classList.add('fa-moon');
-                } else {
-                    htmlElement.setAttribute('data-theme', 'dark');
-                    localStorage.setItem('theme', 'dark');
-                    darkModeIcon.classList.remove('fa-moon');
-                    darkModeIcon.classList.add('fa-sun');
-                }
-            });
-
-            const wishlistButtons = document.querySelectorAll('.product-wishlist');
-            wishlistButtons.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const icon = this.querySelector('i');
-                    if (icon.classList.contains('far')) {
-                        icon.classList.remove('far');
-                        icon.classList.add('fas');
-                        icon.style.color = '#DB4444';
-                    } else {
-                        icon.classList.remove('fas');
-                        icon.classList.add('far');
-                        icon.style.color = '';
-                    }
-                });
-            });
-
-            const addToCartButtons = document.querySelectorAll('.product-add-cart');
-            addToCartButtons.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const cartBadge = document.querySelector('.header-actions .badge');
-                    const count = parseInt(cartBadge.textContent);
-                    cartBadge.textContent = count + 1;
-
-                    // Animation
-                    this.classList.add('added');
-                    setTimeout(() => {
-                        this.classList.remove('added');
-                    }, 300);
-                });
-            });
-
-            const mobileMenuToggle = document.createElement('div');
-            mobileMenuToggle.classList.add('mobile-menu-toggle');
-            mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-
-            const header = document.querySelector('.header-content');
-            header.insertBefore(mobileMenuToggle, document.querySelector('.nav-menu'));
-
-            mobileMenuToggle.addEventListener('click', function () {
-                const navMenu = document.querySelector('.nav-menu');
-                navMenu.classList.toggle('active');
-            });
-
-            const style = document.createElement('style');
-            style.textContent = `
-                    @media (max-width: 992px) {
-                        .mobile-menu-toggle {
-                            display: block;
-                            font-size: 24px;
-                            cursor: pointer;
-                        }
-                        .nav-menu {
-                            display: none;
-                            position: absolute;
-                            top: 100%;
-                            left: 0;
-                            width: 100%;
-                            background-color: var(--bg-color);
-                            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-                            padding: 20px;
-                            flex-direction: column;
-                        }
-                        .nav-menu.active {
-                            display: flex;
-                        }
-                        .nav-item {
-                            margin: 10px 0;
-                        }
-                        .product-add-cart.added {
-                            transform: scale(1.2);
-                        }
-                    }
-                `;
-            document.head.appendChild(style);
-        });
-    </script>
 
    
-
-
-
-
-
-
-
-
-
-
-    <body>
         <!-- zaarnigor -->
         <section class="second-part">
             <div class="status">
@@ -824,7 +640,7 @@
                             <!-- Product 4 -->
                             <div class="product-card">
                                 <div class="product-image">
-                                    <img src="./zarnigor/image/green-chili.png" alt="Green Chili">
+                                    <img src="./zarnigor/image/balgarski.png" alt="Green Chili">
                                     <div class="product-icons">
                                         <img src="./zarnigor/svg/Add-To-wishlist.svg" alt="Wishlist" class="icon">
                                         <img src="./zarnigor/svg/view.svg" alt="View" class="icon">
@@ -908,14 +724,14 @@
 
                             <div class="product-card-2">
                                 <div class="product-image-2">
-                                    <img src="./zarnigor/image/potatoo.png" alt="potato">
+                                    <img src="./zarnigor/image/cabbagee.png" alt="potato">
                                     <div class="product-icons-2">
                                         <img src="./zarnigor/svg/Add-To-wishlist.svg" alt="Wishlist" class="icon-2">
                                         <img src="./zarnigor/svg/view.svg" alt="View" class="icon-2">
                                     </div>
                                 </div>
                                 <div class="product-info-2">
-                                    <p>Big Potatos</p>
+                                    <p>Cabbage</p>
                                     <div class="product-price-2">$14.99</div>
                                     <div class="product-rating-2">
                                         <img src="./zarnigor/image/Rating.png" alt="Rating">
@@ -948,7 +764,7 @@
 
                             <div class="product-card-2">
                                 <div class="product-image-2">
-                                    <img src="./zarnigor/image/chilli.png" alt="chili">
+                                    <img src="./zarnigor/image/letucce2.png" alt="chili">
                                     <div class="product-icons-2">
                                         <img src="./zarnigor/svg/Add-To-wishlist.svg" alt="Wishlist" class="icon-2">
                                         <img src="./zarnigor/svg/view.svg" alt="View" class="icon-2">
@@ -1060,34 +876,6 @@
         </section>
 
 
-        <script>
-            const countdownDate = new Date("May 20, 2025 00:00:00").getTime();
-
-            const timer = setInterval(() => {
-                const now = new Date().getTime();
-                const distance = countdownDate - now;
-
-                if (distance < 0) {
-                    clearInterval(timer);
-                    document.getElementById("days").innerHTML = "00";
-                    document.getElementById("hours").innerHTML = "00";
-                    document.getElementById("minutes").innerHTML = "00";
-                    document.getElementById("seconds").innerHTML = "00";
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById("days").innerHTML = String(days).padStart(2, "0");
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, "0");
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, "0");
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, "0");
-            }, 1000);
-        </script>
-
 
 
 
@@ -1192,7 +980,7 @@
                 </div>
             </div>
         </div>
-        </header>
+       
 
         <main>
             <div class="main_container container">
@@ -1406,10 +1194,10 @@
             </div>
         </footer>
 
-        <!-- Footer Section -->
 
 
-        <!-- Saytning barcha tarkibi -->
+
+        <!-- Javascript -->
 
 <script>
     window.addEventListener('scroll', function() {
@@ -1423,8 +1211,250 @@
         }
     });
     </script>
-    </body>
-    </html>
+   
+
+
+
+
+    <div class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Splash Screen
+            setTimeout(function () {
+                const splashScreen = document.querySelector('.splash-screen');
+                splashScreen.style.opacity = '0';
+                setTimeout(function () {
+                    splashScreen.style.display = 'none';
+                }, 500);
+            }, 2000);
+
+            // Hero Slider
+            const sliderItems = document.querySelectorAll('.slider-item');
+            const sliderDots = document.querySelectorAll('.slider-dot');
+            const prevArrow = document.querySelector('.left-arrow');
+            const nextArrow = document.querySelector('.right-arrow');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                sliderItems.forEach(item => item.classList.remove('active'));
+                sliderDots.forEach(dot => dot.classList.remove('active'));
+
+                sliderItems[index].classList.add('active');
+                sliderDots[index].classList.add('active');
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                let next = currentSlide + 1;
+                if (next >= sliderItems.length) {
+                    next = 0;
+                }
+                showSlide(next);
+            }
+
+            function prevSlide() {
+                let prev = currentSlide - 1;
+                if (prev < 0) {
+                    prev = sliderItems.length - 1;
+                }
+                showSlide(prev);
+            }
+
+            // Auto slide
+            let slideInterval = setInterval(nextSlide, 5000);
+
+            // Click events for arrows
+            nextArrow.addEventListener('click', function () {
+                clearInterval(slideInterval);
+                nextSlide();
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+
+            prevArrow.addEventListener('click', function () {
+                clearInterval(slideInterval);
+                prevSlide();
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+
+            sliderDots.forEach((dot, index) => {
+                dot.addEventListener('click', function () {
+                    clearInterval(slideInterval);
+                    showSlide(index);
+                    slideInterval = setInterval(nextSlide, 5000);
+                });
+            });
+
+            // Dark Mode Toggle
+            const darkModeToggle = document.querySelector('.dark-mode-toggle');
+            const htmlElement = document.documentElement;
+            const darkModeIcon = darkModeToggle.querySelector('i');
+
+            if (localStorage.getItem('theme') === 'dark') {
+                htmlElement.setAttribute('data-theme', 'dark');
+                darkModeIcon.classList.remove('fa-moon');
+                darkModeIcon.classList.add('fa-sun');
+            }
+
+            darkModeToggle.addEventListener('click', function () {
+                if (htmlElement.getAttribute('data-theme') === 'dark') {
+                    htmlElement.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                    darkModeIcon.classList.remove('fa-sun');
+                    darkModeIcon.classList.add('fa-moon');
+                } else {
+                    htmlElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                    darkModeIcon.classList.remove('fa-moon');
+                    darkModeIcon.classList.add('fa-sun');
+                }
+            });
+
+            const wishlistButtons = document.querySelectorAll('.product-wishlist');
+            wishlistButtons.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('far')) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                        icon.style.color = '#DB4444';
+                    } else {
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                        icon.style.color = '';
+                    }
+                });
+            });
+
+            const addToCartButtons = document.querySelectorAll('.product-add-cart');
+            addToCartButtons.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const cartBadge = document.querySelector('.header-actions .badge');
+                    const count = parseInt(cartBadge.textContent);
+                    cartBadge.textContent = count + 1;
+
+                    this.classList.add('added');
+                    setTimeout(() => {
+                        this.classList.remove('added');
+                    }, 300);
+                });
+            });
+
+            const mobileMenuToggle = document.createElement('div');
+            mobileMenuToggle.classList.add('mobile-menu-toggle');
+            mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+
+            const header = document.querySelector('.header-content');
+            header.insertBefore(mobileMenuToggle, document.querySelector('.nav-menu'));
+
+            mobileMenuToggle.addEventListener('click', function () {
+                const navMenu = document.querySelector('.nav-menu');
+                navMenu.classList.toggle('active');
+            });
+
+            const style = document.createElement('style');
+            style.textContent = `
+                    @media (max-width: 992px) {
+                        .mobile-menu-toggle {
+                            display: block;
+                            font-size: 24px;
+                            cursor: pointer;
+                        }
+                        .nav-menu {
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            width: 100%;
+                            background-color: var(--bg-color);
+                            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                            padding: 20px;
+                            flex-direction: column;
+                        }
+                        .nav-menu.active {
+                            display: flex;
+                        }
+                        .nav-item {
+                            margin: 10px 0;
+                        }
+                        .product-add-cart.added {
+                            transform: scale(1.2);
+                        }
+                    }
+                `;
+            document.head.appendChild(style);
+        });
+    </script>
+
+
+
+<script>
+    const countdownDate = new Date("May 20, 2025 00:00:00").getTime();
+
+    const timer = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+
+        if (distance < 0) {
+            clearInterval(timer);
+            document.getElementById("days").innerHTML = "00";
+            document.getElementById("hours").innerHTML = "00";
+            document.getElementById("minutes").innerHTML = "00";
+            document.getElementById("seconds").innerHTML = "00";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = String(days).padStart(2, "0");
+        document.getElementById("hours").innerHTML = String(hours).padStart(2, "0");
+        document.getElementById("minutes").innerHTML = String(minutes).padStart(2, "0");
+        document.getElementById("seconds").innerHTML = String(seconds).padStart(2, "0");
+    }, 1000);
+</script>
+<script>
+    window.addEventListener('scroll', function() {
+      const productCards = document.querySelectorAll('.product-card');
+      const windowHeight = window.innerHeight;
+    
+      productCards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+    
+        if (cardTop <= windowHeight - 150) {
+          card.classList.add('visible');
+        } else {
+          card.classList.remove('visible');
+        }
+      });
+    });
+    </script>
+
+
+
+
+<script>
+    window.addEventListener('scroll', function() {
+      const cardElements = document.querySelectorAll('.card');
+      const windowHeight = window.innerHeight;
+    
+      cardElements.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+    
+        if (cardTop <= windowHeight - 150) {
+          card.classList.add('visible');
+        } else {
+          card.classList.remove('visible');
+        }
+      });
+    });
+    </script>
+
+
     </body>
 
 </html>

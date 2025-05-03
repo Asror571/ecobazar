@@ -234,36 +234,6 @@ img {
     position: relative;
 }
 
-/* .nav-link:after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: width 0.3s ease;
-} */
-/* 
-.nav-link:hover:after,
-.nav-link.active:after {
-    width: 100%;
-}
-
-.nav-link.has-dropdown:after {
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 0;
-    background-color: none;
-    margin-left: 7px;
-    vertical-align: middle;
-    border-top: 4px solid;
-    border-right: 4px solid white;
-    border-left: 4px solid white;
-    position: static;
-} */
-
 .header-actions {
     display: flex;
     align-items: center;
@@ -459,7 +429,6 @@ img {
     margin-right: 20px;
 }
 
-/* Features Section */
 .features-section {
     padding: 40px 0;
     background-image: url('./zarnigor/image/background-4.png');
@@ -506,7 +475,6 @@ img {
     font-size: 14px;
 }
 
-/* Products Section */
 .products-section {
     padding: 40px 0;
 }
@@ -534,41 +502,63 @@ img {
     margin-left: 5px;
 }
 
-.products-container {
+
+@keyframes zoomFadeBounce {
+    0% {
+      opacity: 0;
+      transform: scale(0.7) translateY(50px);
+    }
+    60% {
+      opacity: 1;
+      transform: scale(1.05) translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  .products-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-}
-
-.product-card {
+  }
+  
+  .product-card {
+    opacity: 0;
+    transform: scale(0.8) translateY(50px);
+    transition: all 0.3s ease;
     border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
-    transition: var(--transition);
     position: relative;
-}
-
-.product-card:hover {
+  }
+  
+  .product-card.visible {
+    animation: zoomFadeBounce 0.8s ease forwards;
+  }
+  
+  /* Qolgan UI stillari */
+  .product-card:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.product-image {
+  }
+  
+  .product-image {
     height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--light-bg);
     position: relative;
-}
-
-.product-image img {
+  }
+  
+  .product-image img {
     max-height: 100%;
     max-width: 100%;
     object-fit: cover;
-    
-}
-
-.product-discount {
+  }
+  
+  .product-discount {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -577,9 +567,9 @@ img {
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 12px;
-}
-
-.product-wishlist {
+  }
+  
+  .product-wishlist {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -592,13 +582,13 @@ img {
     justify-content: center;
     cursor: pointer;
     transition: var(--transition);
-}
-
-.product-wishlist:hover {
+  }
+  
+  .product-wishlist:hover {
     color: var(--discount-color);
-}
-
-.product-add-cart {
+  }
+  
+  .product-add-cart {
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -612,61 +602,62 @@ img {
     justify-content: center;
     cursor: pointer;
     transition: var(--transition);
-}
-
-.product-add-cart:hover {
+  }
+  
+  .product-add-cart:hover {
     background-color: var(--secondary-color);
-}
-
-.product-content {
+  }
+  
+  .product-content {
     padding: 15px;
-}
-
-.product-category {
+  }
+  
+  .product-category {
     color: var(--light-text);
     font-size: 12px;
     margin-bottom: 5px;
-}
-
-.product-title {
+  }
+  
+  .product-title {
     font-size: 16px;
     margin-bottom: 10px;
-}
-
-.product-rating {
+  }
+  
+  .product-rating {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-}
-
-.rating-stars {
+  }
+  
+  .rating-stars {
     color: var(--star-color);
     margin-right: 5px;
-}
-
-.rating-count {
+  }
+  
+  .rating-count {
     color: var(--light-text);
     font-size: 12px;
-}
-
-.product-price {
+  }
+  
+  .product-price {
     font-weight: 600;
     display: flex;
     align-items: center;
-}
-
-.current-price {
+  }
+  
+  .current-price {
     color: var(--primary-color);
-}
-
-.old-price {
+  }
+  
+  .old-price {
     color: var(--light-text);
     text-decoration: line-through;
     margin-left: 10px;
     font-size: 14px;
-}
+  }
+  
+  
 
-/* Categories Section */
 .categories-section {
     padding: 40px 0;
     background-image: url('./zarnigor/image/background-4.png');
@@ -708,7 +699,6 @@ img {
     font-size: 14px;
 }
 
-/* About Section */
 .about-section {
     padding: 60px 0;
     background-image: url('./zarnigor/image/background-3.png');
@@ -771,7 +761,6 @@ img {
 }
 
 
-/* Dark mode toggle */
 .dark-mode-toggle {
     position: fixed;
     bottom: 20px;
@@ -793,7 +782,6 @@ img {
     transform: scale(1.1);
 }
 
-/* Responsive Styles */
 @media (max-width: 992px) {
     .nav-menu {
         display: none;
@@ -856,4 +844,4 @@ img {
         margin-top: 10px;
   
 }
-</style>
+}
