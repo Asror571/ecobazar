@@ -94,6 +94,85 @@
     position: relative;
 
 }
+select {
+    appearance: none; /* Brauzerning standart ko‘rinishini olib tashlash */
+    background-color: #fcfbf9; /* Yog‘och rangi */
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    padding: 10px 30px 10px 15px; /* O‘ng tarafdan strelka uchun joy */
+    border-radius: 5px;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%238b4513" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Strelka ikonkasi */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+select:hover {
+    background-color: #a7a49e; 
+    color: #fff;
+}
+
+select:focus {
+    outline: none;
+}
+
+select option {
+    background-color: #f5e8c7;
+    padding: 10px;
+    font-size: 16px;
+}
+
+select option:hover {
+    color: #fff;
+}
+
+.language-currency {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.language-selector, .currency-selector {
+    position: relative;
+}
+
+.selector {
+    appearance: none; /* Brauzer standart ko‘rinishini olib tashlash */
+    background-color: #faf9f8; /* Yog‘och rangi */
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    padding: 8px 25px 8px 10px; /* Strelka uchun joy */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%238b4513" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Strelka */
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.selector:hover {
+    background-color: #99958d; /* Hover rangi */
+    color: #fff;
+}
+
+.selector:focus {
+    outline: none;
+}
+
+.selector option {
+    background-color: #f5e8c7;
+    color: #2f2f2f;
+    padding: 5px;
+}
+
+.selector option:hover {
+    color: #fff;
+}
 .shop-now{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
