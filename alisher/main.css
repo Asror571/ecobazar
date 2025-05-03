@@ -346,6 +346,8 @@ main .card-body p {
   padding: 40px 0 0 0;
 }
 .footer-top {
+  max-width: 1500px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -429,6 +431,8 @@ main .card-body p {
   object-fit: contain;
 }
 .footer-bottom {
+  margin: 0 auto;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
