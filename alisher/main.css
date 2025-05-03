@@ -177,6 +177,11 @@ main .card {
 
 main .card-body {
   padding: 20px;
+  width: 424;
+  height: 170px;
+  padding: 20px;
+  gap: 20px;
+  border-bottom-right-radius: 8px;
 }
 
 .quote-icon {
@@ -186,9 +191,12 @@ main .card-body {
 }
 
 main .card-text {
+  width: 376px;
+  height: 83;
   font-size: 14px;
   color: #555;
   margin-bottom: 20px;
+  gap: 8px;
 }
 
 .customer-info {
