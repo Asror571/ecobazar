@@ -96,7 +96,7 @@
     bottom: -15px;
     right: 100px;
 }
-/* 
+
 @media (max-width: 768px) {
     .status {
         padding: 20px;
@@ -106,7 +106,7 @@
     .leaf, .pear, .mushroom {
         display: none;
     }
-} */
+}
 
 .containnner {
     padding: 40px 0; 
@@ -485,6 +485,8 @@ font-family: 'Poppins', sans-serif;
     text-align: center;
     overflow: hidden;
     transition: transform 0.2s;
+    border: 1px solid var(--light-bg);
+
 }
 
 .product__wrapper {
@@ -496,7 +498,7 @@ font-family: 'Poppins', sans-serif;
 .product-card-23 {
     display: flex;
     align-items: center;
-    border: 1px solid #2C742F;
+    /* border: 1px solid #2C742F; */
     border-radius: 8px;
     box-shadow: 0px 0px 12px 0px #20B52652;
     text-align: center;
@@ -505,7 +507,9 @@ font-family: 'Poppins', sans-serif;
 }
 
 .product-card-2:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
+    border: 1px solid #2C742F;
+    box-shadow: 0px 0px 12px 0px #20B52652;
 }
 .product-card-23:hover {
     transform: translateY(-10px);
