@@ -5,10 +5,9 @@
 }
 
 .status {
-    padding: 40px 300px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 0; 
     background-image: url('/zarnigor/image/background-stats.png');
     background-size: cover;
     background-position: center;
@@ -16,7 +15,16 @@
     position: relative;
 }
 
-.status div {
+.status-p{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+}
+
+
+.status-p div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +71,7 @@
     bottom: -15px;
     right: 100px;
 }
-
+/* 
 @media (max-width: 768px) {
     .status {
         padding: 20px;
@@ -73,10 +81,12 @@
     .leaf, .pear, .mushroom {
         display: none;
     }
-}
+} */
 
 .containnner {
-    padding: 40px 300px;
+    padding: 40px 0; 
+    margin: 0 auto;
+    max-width: 1200px;
     background-image: url('/zarnigor/image/shop-now.bckground.png');
     background-size: cover;
     background-position: center;
@@ -194,7 +204,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .shop-now {
         padding: 20px;
         grid-template-columns: 1fr;
@@ -208,7 +218,7 @@ font-family: 'Poppins', sans-serif;
     .banner .timer {
         justify-content: center;
     }
-}
+} */
 
 .leaf2{
         width: 50px;
@@ -226,7 +236,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .products__container__wrapper {
-   width: 1320px;
+   width: 1200px;
 }
 
 

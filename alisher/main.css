@@ -1,4 +1,4 @@
-/* Umumiy sozlamalar */
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
@@ -6,7 +6,12 @@ body {
   padding: 0;
 }
 
-/* Header uslubi */
+/* .main-container-wrapperrr{
+  max-width: 1200px;
+  margin: 0 auto;
+} */
+
+
 header.news-section {
   background-color: #F2F2F2;
   padding: 40px 0;
