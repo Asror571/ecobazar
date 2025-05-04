@@ -20,7 +20,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
-    max-width: 1200px;
+    max-width: 1315px;
 }
 
 
@@ -86,7 +86,7 @@
 .containnner {
     padding: 40px 0; 
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1315px;
     background-image: url('/zarnigor/image/shop-now.bckground.png');
     background-size: cover;
     background-position: center;
@@ -236,7 +236,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .products__container__wrapper {
-   width: 1200px;
+   width: 1315px;
 }
 
 
