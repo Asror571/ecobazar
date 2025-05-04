@@ -342,9 +342,13 @@ font-family: 'Poppins', sans-serif;
   transition: 0.2s;
 }
 
+
+
 .products__container__wrapper {
-   width: 1315px;
-}
+    max-width: 1315px;
+    width: 100%;
+    margin: 0 auto;
+ }
 
 
 .best-products{
@@ -637,7 +641,7 @@ font-family: 'Poppins', sans-serif;
     max-width: 1320px;
     margin: 0 auto;
     margin-top: 40px;
-    background-color: #f8f9fa;
+    background-color: var(--bg-color);
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
@@ -646,7 +650,7 @@ font-family: 'Poppins', sans-serif;
   #comments-list .comment {
     margin-bottom: 15px;
     padding: 10px;
-    background-color: white;
+    background-color: var(--border-color);
     border-left: 4px solid #28a745;
     border-radius: 8px;
     animation: fadeInUp 0.5s ease forwards;
@@ -658,6 +662,7 @@ font-family: 'Poppins', sans-serif;
   
   #comment-form input,
   #comment-form textarea {
+    background-color: var(--border-color);
     width: 100%;
     padding: 10px;
     margin-top: 10px;
