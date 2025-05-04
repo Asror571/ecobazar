@@ -191,6 +191,19 @@ img {
     border-right: 4px solid transparent;
     border-left: 4px solid transparent; 
 } */
+/* 
+.main-header {
+    padding: 15px 0;
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+
+
+} */
 
 .main-header {
     padding: 15px 0;
@@ -198,7 +211,21 @@ img {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
-    z-index: 100;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Parent elementlar overflow bilan muammo bo'lishi mumkin */
+body, html {
+    overflow-x: hidden; /* Gorizontal scroll bo'lmasligi uchun */
+}
+
+/* Header konteynerining максимал balandligi belgilanmagan bo'lsa */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
