@@ -1099,6 +1099,20 @@
         </aside>
 
 
+        <div class="comments-section">
+            <h3>Comments</h3>
+            <div id="comments-list">
+              <!-- Commentlar shu yerda ko‘rinadi -->
+            </div>
+            <form id="comment-form">
+              <input type="text" id="username" placeholder="Your name" required />
+              <textarea id="comment" placeholder="Your comment" required></textarea>
+              <button type="submit">Post Comment</button>
+            </form>
+          </div>
+          
+
+
 
         <!-- Footer Section -->
         <footer class="footer">
@@ -1195,6 +1209,7 @@
         </footer>
 
 
+  
 
 
         <!-- Javascript -->
@@ -1453,6 +1468,31 @@
       });
     });
     </script>
+
+  
+  
+    <script>document.getElementById('comment-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+      
+        const username = document.getElementById('username').value.trim();
+        const comment = document.getElementById('comment').value.trim();
+      
+        if (username && comment) {
+          const commentHTML = `
+            <div class="comment">
+              <strong>${username}</strong>
+              <p>${comment}</p>
+            </div>
+          `;
+      
+          document.getElementById('comments-list').innerHTML += commentHTML;
+      
+          // Tozalaymiz
+          document.getElementById('username').value = '';
+          document.getElementById('comment').value = '';
+        }
+      });
+      </script>
 
 
     </body>
