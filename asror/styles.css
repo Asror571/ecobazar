@@ -760,18 +760,6 @@ img {
 
 
 
-.about-section {
-    padding: 60px 0;
-    background-image: url('./zarnigor/image/background-3.png');
-}
-
-.about-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    align-items: center;
-}
-
 .about-images {
     position: relative;
     height: 450px;
